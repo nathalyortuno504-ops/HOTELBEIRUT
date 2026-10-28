@@ -903,7 +903,15 @@ document.addEventListener('DOMContentLoaded',function(){document.querySelectorAl
 function toggleMobileMenu(){const menu=document.getElementById('mobile-menu');const icon=document.getElementById('menu-icon');if(menu){menu.classList.toggle('hidden');if(icon)icon.className=menu.classList.contains('hidden')?'fa-solid fa-bars':'fa-solid fa-xmark';}}
 function estaRegistrado(){try{return localStorage.getItem('hotelBeirutRegistroCompleto')==='true';}catch(error){return false;}}
 function actualizarEstadoRegistro(){const estado=document.getElementById('registro-estado');const boton=document.getElementById('registro-submit');if(estaRegistrado()){if(estado){estado.textContent='Registro completado en este navegador. Ya puedes solicitar una reserva.';estado.className='text-sm text-emerald-400';}if(boton){boton.innerHTML='<i class="fa-solid fa-circle-check mr-2"></i>Registrado';boton.classList.remove('bg-gold-500','hover:bg-gold-600');boton.classList.add('bg-emerald-500');}}}
-function handleRegistroSubmit(event){event.preventDefault();const form=event.target;if(!form.reportValidity())return;try{localStorage.setItem('hotelBeirutRegistroCompleto','true');}catch(error){alert('Tu navegador no permite guardar el registro. Habilita el almacenamiento local e inténtalo nuevamente.');return;}actualizarEstadoRegistro();alert('Registro completado. Ahora puedes solicitar una reserva.');}
+function handleRegistroSubmit(event) {
+event.preventDefault();const nombre = document.getElementById('registro-nombre').value.trim();
+const carnet = document.getElementById('registro-carnet').value.trim(); if (!nombre || !carnet) { alert('Completa tu nombre y carnet.'); return; }
+sessionStorage.setItem('hotelBeirutNombre', nombre);
+sessionStorage.setItem('hotelBeirutCarnet', carnet);
+localStorage.setItem('hotelBeirutRegistroCompleto', 'true');
+actualizarEstadoRegistro();
+alert('Registro completado. Ya puedes solicitar tu reserva.');
+}
 function pedirRegistro(){showPage('contacto');alert('Para reservar, primero debes registrarte con tu carnet en la sección Contacto.');setTimeout(()=>{const card=document.getElementById('registro-carnet-card');if(card)card.scrollIntoView({behavior:'smooth',block:'center'});},100);}
 function openReservaModal(roomName){if(!estaRegistrado()){pedirRegistro();return;}const modal=document.getElementById('reserva-modal');if(!modal)return;if(roomName){const field=document.getElementById('modal-room-type');if(field)field.value=roomName;}modal.classList.remove('hidden');modal.classList.add('flex');}
 function closeReservaModal(){const modal=document.getElementById('reserva-modal');if(modal){modal.classList.add('hidden');modal.classList.remove('flex');}}
