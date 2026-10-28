@@ -3,11 +3,8 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Hotel Beirut - Oruro, Bolivia</title>
-<!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com"></script>
-<!-- FontAwesome Icons -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<!-- Google Fonts Inter -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"/>
 <script>
         tailwind.config = {
@@ -125,15 +122,13 @@ img { max-width: 100%; }
 @media(max-width:600px){.carnaval-carousel{height:230px}.carnaval-caption{padding:14px 42px 32px}.carnaval-caption strong{font-size:17px}}
 </style>
 <style id="ajustes-logo-y-textos">
-/* Logo ligeramente más grande y encabezado con espacio suficiente */
+
 header.glass-header > div > div:first-child { min-height: 4.4cm !important; gap: 0.75rem; }
 header.glass-header a.group { min-width: 0; align-items: center; }
 header.glass-header a.group > div:last-child { min-width: 0; }
 header.glass-header a.group > div:last-child span:first-child { line-height: 1.2 !important; padding-bottom: 2px; }
 header.glass-header a.group > div:last-child span:last-child { line-height: 1.35 !important; padding-bottom: 2px; }
-/* El texto del menú no queda pegado ni cortado por la línea inferior */
 header.glass-header nav a { display: inline-flex; align-items: center; line-height: 1.5 !important; padding-top: 0.65rem !important; padding-bottom: 0.85rem !important; white-space: nowrap; }
-/* Evita que los títulos y subtítulos corten la parte inferior de las letras */
 h1, h2, h3, h4 { line-height: 1.3 !important; padding-bottom: 0.08em; overflow: visible; }
 @media (max-width: 767px) {
   header.glass-header > div > div:first-child { min-height: 3.9cm !important; }
@@ -141,7 +136,6 @@ h1, h2, h3, h4 { line-height: 1.3 !important; padding-bottom: 0.08em; overflow: 
   header.glass-header a.group > div:last-child span:first-child { font-size: 1.15rem !important; }
   header.glass-header a.group > div:last-child span:last-child { font-size: 9px !important; letter-spacing: 0.12em !important; }
 }
-/* Corrección: separar los títulos del encabezado fijo para que no queden tapados */
 .page-section:not(#inicio) {
   padding-top: 200px !important;
 }
@@ -227,7 +221,7 @@ Experiencia Única en Hotel Beirut <span class="text-transparent bg-clip-text bg
 <p class="text-slate-300 text-base sm:text-xl max-w-2xl mx-auto font-light leading-relaxed mb-10">
                 Disfrute de habitaciones equipadas, atención personalizada las 24 horas y la mejor ubicación estratégica para su viaje de negocios o descanso.
             </p>
-<!-- Carrusel sencillo para promocionar el Carnaval de Oruro -->
+
 <div class="carnaval-carousel" aria-label="Imágenes del Carnaval de Oruro">
   <img id="carnaval-slide" src="https://commons.wikimedia.org/wiki/Special:FilePath/Carnaval_de_Oruro.jpg?width=1200" alt="Danzante del Carnaval de Oruro" onerror="this.onerror=null;this.src='https://commons.wikimedia.org/wiki/Special:FilePath/El_carnaval_de_Oruro.jpg?width=1200';">
   <div class="carnaval-caption"><strong id="carnaval-title">Viva la magia del Carnaval de Oruro</strong><p id="carnaval-text">Música, danza y tradición a pocos pasos de una estadía cómoda.</p></div>
@@ -274,13 +268,13 @@ Experiencia Única en Hotel Beirut <span class="text-transparent bg-clip-text bg
                 </p>
 </div>
 <div class="grid grid-cols-1 gap-10 items-start">
-<!-- Vídeo de presentación centrado, separado del texto -->
+
 <div class="w-full max-w-4xl mx-auto">
 <div class="relative bg-slate-900 border border-slate-800 rounded-3xl p-3 shadow-2xl overflow-hidden group">
-<!-- Contenedor del Vídeo de Presentación -->
+
 <div class="relative aspect-video rounded-2xl overflow-hidden bg-slate-950 flex items-center justify-center">
 <video controls playsinline preload="metadata" class="block w-full h-full object-contain">
-  <source src="videos/video%201.mp4" type="video/mp4">
+  <source src="video 1.mp4" type="video/mp4">
   Tu navegador no puede reproducir este vídeo.
 </video>
 </div>
@@ -290,7 +284,7 @@ Experiencia Única en Hotel Beirut <span class="text-transparent bg-clip-text bg
 </div>
 </div>
 </div>
-<!-- Texto y tarjeta de los dueños debajo del vídeo -->
+
 <div class="w-full max-w-4xl mx-auto space-y-6">
 <div class="bg-slate-900/80 border border-slate-800 p-8 rounded-3xl backdrop-blur-sm relative">
 <i class="fa-solid fa-quote-right text-5xl text-gold-500/10 absolute top-6 right-6"></i>
@@ -302,14 +296,14 @@ Fue precisamente durante una temporada de Carnaval cuando surgió la idea de cre
 En 2015, después de varios meses de planificación y preparación, nació oficialmente el Hotel Beirut. El nombre fue elegido como un homenaje a las raíces familiares y a la ciudad de Beirut, símbolo de la cultura y hospitalidad libanesa.
 
                         </p>
-<!-- Perfil / Tarjeta de Presentación de los Dueños -->
+
 <div>
 <h4 class="font-bold text-white text-base">Familia Fundadora Beirut</h4>
 <p class="text-xs text-gold-400 font-medium">Propietarios &amp; Dirección General</p>
 <p class="text-xs text-slate-400 mt-0.5"><i class="fa-solid fa-award text-gold-500 mr-1"></i> +11 años brindando hospitalidad de excelencia</p>
 </div>
 </div>
-<!-- Misión y visión debajo del video y la historia -->
+
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
   <div class="bg-slate-900 border border-gold-500/30 p-5 rounded-2xl">
     <h3 class="font-serif text-xl font-bold text-gold-400 mb-2"><i class="fa-solid fa-bullseye mr-2"></i>Misión</h3>
@@ -329,7 +323,7 @@ En 2015, después de varios meses de planificación y preparación, nació ofici
 <div class="w-20 h-1 bg-gold-500 mx-auto rounded-full mb-6"></div>
 <p class="text-slate-300 text-base">Diseñadas para brindarle tranquilidad, aislamiento acústico y la máxima comodidad durante su estadía.</p>
 </div>
-<!-- Grid de Habitaciones -->
+
 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
    <!-- Habitación 1: Individual -->
     <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-xl hover:border-gold-500/50 transition-all duration-300 flex flex-col group">
@@ -369,7 +363,7 @@ En 2015, después de varios meses de planificación y preparación, nació ofici
         </div>
     </div>
 
-    <!-- Habitación 2: Doble / Matrimonial -->
+    
     <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-xl hover:border-gold-500/50 transition-all duration-300 flex flex-col group">
         <div class="relative h-64 overflow-hidden room-flip-card" title="Toca o pasa el cursor para ver otra imagen">
             <div class="room-flip-inner">
@@ -401,7 +395,7 @@ En 2015, después de varios meses de planificación y preparación, nació ofici
         </div>
     </div>
 
-    <!-- Habitación 3: Suite Familiar -->
+    
     <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-xl hover:border-gold-500/50 transition-all duration-300 flex flex-col group">
         <div class="relative h-64 overflow-hidden room-flip-card" title="Toca o pasa el cursor para ver otra imagen">
             <div class="room-flip-inner">
@@ -436,7 +430,7 @@ En 2015, después de varios meses de planificación y preparación, nació ofici
         </div>
     </div>
 
-    <!-- Habitación 4: Triple Familiar -->
+    
     <div class="bg-slate-950 border border-slate-800 rounded-3xl overflow-hidden shadow-xl hover:border-gold-500/50 transition-all duration-300 flex flex-col group">
         <div class="relative h-64 overflow-hidden room-flip-card" title="Toca o pasa el cursor para ver otra imagen">
             <div class="room-flip-inner">
@@ -557,9 +551,9 @@ En 2015, después de varios meses de planificación y preparación, nació ofici
 Av. 6 de Agosto entre calles Aroma y Rodríguez
 Oruro, Bolivia. Consulta el mapa interactivo o mira el vídeo explicativo de la ruta.</p>
 </div>
-<!-- Grid Doble: Google Maps e Instrucciones en Vídeo -->
+
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-<!-- Caja 1: Google Maps Interactivo -->
+
 <div class="bg-slate-950 border border-slate-800 rounded-3xl p-6 shadow-2xl flex flex-col justify-between">
 <div>
 <div class="flex items-center justify-between mb-4">
@@ -571,7 +565,6 @@ Oruro, Bolivia. Consulta el mapa interactivo o mira el vídeo explicativo de la 
                             </span>
 </div>
 <p class="text-xs text-slate-400 mb-4">Dirección: Av. 6 de Agosto, Oruro - Bolivia</p>
-<!-- Embed Google Maps -->
 <div class="w-full h-80 rounded-2xl overflow-hidden border border-slate-800 shadow-inner relative bg-slate-900">
 <iframe allowfullscreen="" class="w-full h-full border-0 filter brightness-90 contrast-110" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=Hotel+Beirut+Oruro,+Av.+6+de+Agosto,+Oruro,+Bolivia&output=embed">
 </iframe>
@@ -583,21 +576,20 @@ Oruro, Bolivia. Consulta el mapa interactivo o mira el vídeo explicativo de la 
                         </a>
 </div>
 </div>
-<!-- Caja 2: Vídeo Guía "Cómo Llegar paso a paso" -->
 <div class="bg-slate-950 border border-slate-800 rounded-3xl p-6 shadow-2xl flex flex-col justify-between">
 <div>
 <div class="flex items-center justify-between mb-4">
 <h3 class="font-serif text-xl font-bold text-white flex items-center gap-2">
-<i class="fa-solid fa-video text-gold-400"></i> Vídeo Guía de Llegada
+<i class="fa-solid fa-video text-gold-400"></i> Vídeo deL Hotel por dentro
                             </h3>
 <span class="bg-gold-500/20 text-gold-400 border border-gold-500/30 text-[11px] font-semibold px-2.5 py-0.5 rounded-full">
                                 Ruta en Vídeo
                             </span>
 </div>
-<!-- Vídeo Reproductor Explicativo -->
+
 <div class="w-full h-80 rounded-2xl overflow-hidden border border-slate-800 shadow-inner relative bg-slate-900">
 <video controls width="100%">
-  <source src="videos/video%202.mp4" type="video/mp4">
+  <source src="video 2.mp4" type="video/mp4">
 </video>
 </div>
 <!-- Indicaciones rápidas -->
@@ -666,7 +658,7 @@ Oruro, Bolivia. Consulta el mapa interactivo o mira el vídeo explicativo de la 
 </div>
 </div>
 </div>
-<!-- Registro obligatorio antes de solicitar una reserva -->
+
 <div class="lg:col-span-7">
   <div id="registro-carnet-card" class="bg-slate-900 border border-gold-500/50 p-6 sm:p-8 rounded-3xl shadow-xl mb-6">
     <div class="flex items-start gap-3 mb-4">
@@ -692,7 +684,7 @@ Oruro, Bolivia. Consulta el mapa interactivo o mira el vídeo explicativo de la 
       <p id="registro-estado" class="text-sm text-slate-300" role="status" aria-live="polite">Aún no estás registrado. Completa el formulario para habilitar las reservas.</p>
     </form>
   </div>
-<!-- Formulario de Consulta / Reserva -->
+
 <div class="bg-slate-900 border border-slate-800 p-8 rounded-3xl shadow-2xl relative">
 <h3 class="font-serif text-2xl font-bold text-white mb-2">Envíanos un Mensaje</h3>
 <p class="text-xs text-slate-400 mb-6">Rellene el formulario para consultar disponibilidad o requerimientos especiales.</p>
@@ -779,13 +771,13 @@ Oruro, Bolivia. Consulta el mapa interactivo o mira el vídeo explicativo de la 
 </div>
 </div>
 </footer><div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 items-end">
-<!-- Tooltip indicativo -->
+
 <div class="bg-slate-900/95 text-white text-xs px-3 py-1.5 rounded-lg border border-slate-700 shadow-xl mb-1 flex items-center gap-2 animate-bounce" id="contact-tooltip">
 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
 <span>¿Necesitas ayuda? <strong>Recepción en línea</strong></span>
 <button class="ml-2 text-slate-400 hover:text-white" onclick="document.getElementById('contact-tooltip').remove()">×</button>
 </div>
-<!-- Botón Flotante de WhatsApp Recepción -->
+
 <a aria-label="Contactar por WhatsApp" class="pulse-btn w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-2xl shadow-2xl transition-all hover:scale-110 relative group" href="https://wa.me/59177153653?text=Hola%20Recepcion%20Hotel%20Beirut,%20quisiera%20consultar%20disponibilidad" target="_blank">
 <i class="fa-brands fa-whatsapp"></i>
 <span class="absolute right-16 top-2 bg-slate-900 text-white text-xs px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-slate-700 shadow-lg pointer-events-none">
@@ -799,17 +791,17 @@ Oruro, Bolivia. Consulta el mapa interactivo o mira el vídeo explicativo de la 
                 Llamar a Recepción
             </span>
 </a>
-<!-- Botón flotante de Instagram del Hotel Beirut -->
+
 <a aria-label="Visitar Instagram del Hotel Beirut" title="Instagram Hotel Beirut" class="w-14 h-14 text-white rounded-full flex items-center justify-center text-2xl shadow-lg transition-all hover:scale-110 relative group" href="https://www.instagram.com/hotelbeirut?xtok=dTltcGIwOWRqeXc0" target="_blank" rel="noopener noreferrer" style="background:linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5);text-decoration:none;">
 <i class="fa-brands fa-instagram"></i>
 <span class="absolute right-16 top-2 bg-slate-900 text-white text-xs px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 whitespace-nowrap border border-slate-700 pointer-events-none">Instagram Hotel Beirut</span>
 </a>
-<!-- Botón flotante de TikTok del Hotel Beirut -->
+
 <a aria-label="Visitar TikTok del Hotel Beirut" title="TikTok Hotel Beirut" class="w-14 h-14 bg-black hover:bg-slate-800 text-white rounded-full flex items-center justify-center text-2xl shadow-lg transition-all hover:scale-110 relative group" href="https://www.tiktok.com/@hotelbeirutoruro?_r=1&_t=ZS-9ASPLdR6AAW" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
 <i class="fa-brands fa-tiktok"></i>
 <span class="absolute right-16 top-2 bg-slate-900 text-white text-xs px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 whitespace-nowrap border border-slate-700 pointer-events-none">TikTok Hotel Beirut</span>
 </a>
-<!-- Botón flotante de Facebook del Hotel Beirut -->
+
 <a aria-label="Visitar Facebook del Hotel Beirut" title="Facebook Hotel Beirut" class="w-14 h-14 bg-blue-600 hover:bg-blue-700 text-white rounded-full flex items-center justify-center text-2xl shadow-lg transition-all relative group" href="https://www.facebook.com/share/1KgGp5LBBb/" target="_blank" rel="noopener noreferrer" style="background:#1877f2;color:white;text-decoration:none;">
 <i class="fa-brands fa-facebook-f"></i>
 <span class="absolute right-16 top-2 bg-slate-900 text-white text-xs px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 whitespace-nowrap border border-slate-700 pointer-events-none">Facebook Hotel Beirut</span>
