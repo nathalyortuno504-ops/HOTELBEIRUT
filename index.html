@@ -903,9 +903,7 @@ document.addEventListener('DOMContentLoaded',function(){document.querySelectorAl
 function toggleMobileMenu(){const menu=document.getElementById('mobile-menu');const icon=document.getElementById('menu-icon');if(menu){menu.classList.toggle('hidden');if(icon)icon.className=menu.classList.contains('hidden')?'fa-solid fa-bars':'fa-solid fa-xmark';}}
 function estaRegistrado(){try{return localStorage.getItem('hotelBeirutRegistroCompleto')==='true';}catch(error){return false;}}
 function actualizarEstadoRegistro(){const estado=document.getElementById('registro-estado');const boton=document.getElementById('registro-submit');if(estaRegistrado()){if(estado){estado.textContent='Registro completado en este navegador. Ya puedes solicitar una reserva.';estado.className='text-sm text-emerald-400';}if(boton){boton.innerHTML='<i class="fa-solid fa-circle-check mr-2"></i>Registrado';boton.classList.remove('bg-gold-500','hover:bg-gold-600');boton.classList.add('bg-emerald-500');}}}
-function handleRegistroSubmit(event) {
-event.preventDefault();const nombre = sessionStorage.getItem('hotelBeirutNombre') || '';
-const carnet = sessionStorage.setItem('hotelBeirutNombre', nombre);
+function handleRegistroSubmit(event)const carnet = document.getElementById('registro-carnet').value.trim();
 sessionStorage.setItem('hotelBeirutCarnet', carnet);
 localStorage.setItem('hotelBeirutRegistroCompleto', 'true');
 actualizarEstadoRegistro();
@@ -986,7 +984,7 @@ function handleModalSubmit(event) {
         '\nSalida: ' + (vals[4] || '');
 
     window.open(
-        'https://wa.me/59173395975?text=' + encodeURIComponent(message),
+        'https://wa.me/59177153653?text=' + encodeURIComponent(message),
         '_blank'
     );
 
