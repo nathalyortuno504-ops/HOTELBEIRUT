@@ -904,9 +904,8 @@ function toggleMobileMenu(){const menu=document.getElementById('mobile-menu');co
 function estaRegistrado(){try{return localStorage.getItem('hotelBeirutRegistroCompleto')==='true';}catch(error){return false;}}
 function actualizarEstadoRegistro(){const estado=document.getElementById('registro-estado');const boton=document.getElementById('registro-submit');if(estaRegistrado()){if(estado){estado.textContent='Registro completado en este navegador. Ya puedes solicitar una reserva.';estado.className='text-sm text-emerald-400';}if(boton){boton.innerHTML='<i class="fa-solid fa-circle-check mr-2"></i>Registrado';boton.classList.remove('bg-gold-500','hover:bg-gold-600');boton.classList.add('bg-emerald-500');}}}
 function handleRegistroSubmit(event) {
-event.preventDefault();const nombre = document.getElementById('registro-nombre').value.trim();
-const carnet = document.getElementById('registro-carnet').value.trim(); if (!nombre || !carnet) { alert('Completa tu nombre y carnet.'); return; }
-sessionStorage.setItem('hotelBeirutNombre', nombre);
+event.preventDefault();const nombre = sessionStorage.getItem('hotelBeirutNombre') || '';
+const carnet = sessionStorage.setItem('hotelBeirutNombre', nombre);
 sessionStorage.setItem('hotelBeirutCarnet', carnet);
 localStorage.setItem('hotelBeirutRegistroCompleto', 'true');
 actualizarEstadoRegistro();
@@ -916,7 +915,8 @@ function pedirRegistro(){showPage('contacto');alert('Para reservar, primero debe
 function openReservaModal(roomName){if(!estaRegistrado()){pedirRegistro();return;}const modal=document.getElementById('reserva-modal');if(!modal)return;if(roomName){const field=document.getElementById('modal-room-type');if(field)field.value=roomName;}modal.classList.remove('hidden');modal.classList.add('flex');}
 function closeReservaModal(){const modal=document.getElementById('reserva-modal');if(modal){modal.classList.add('hidden');modal.classList.remove('flex');}}
 function handleQuickSearch(event){event.preventDefault();if(!estaRegistrado()){pedirRegistro();return;}showPage('contacto');}
-function handleFormSubmit(event){event.preventDefault();if(!estaRegistrado()){pedirRegistro();return;}const form=event.target;const fields=Array.from(form.querySelectorAll('input, select, textarea'));const nombre=(fields[0]&&fields[0].value)||'';const telefono=(fields[1]&&fields[1].value)||'';const habitacion=(document.getElementById('contacto-room')||{}).value||'Por definir';const llegada=fields.find(el=>el.type==='date')?.value||'Por definir';const mensaje=fields.find(el=>el.tagName==='TEXTAREA')?.value||'';const textMsg='Hola, quiero consultar una reserva en Hotel Beirut. Nombre: '+nombre+'. Teléfono: '+telefono+'. Habitación: '+habitacion+'. Fecha de llegada: '+llegada+'. Solicitud: '+mensaje;window.open('https://wa.me/59177153653?text='+encodeURIComponent(textMsg),'_blank');}
+function handleFormSubmit(event){event.preventDefault();if(!estaRegistrado()){pedirRegistro();return;}const form=event.target;const fields=Array.from(form.querySelectorAll('input, select, textarea'));const nombre=(fields[0]&&fields[0].value)|| '';
+const carnet = sessionStorage.getItem('hotelBeirutCarnet') || '';const telefono=(fields[1]&&fields[1].value)||'';const habitacion=(document.getElementById('contacto-room')||{}).value||'Por definir';const llegada=fields.find(el=>el.type==='date')?.value||'Por definir';const mensaje=fields.find(el=>el.tagName==='TEXTAREA')?.value||'';const textMsg='Hola, quiero consultar una reserva en Hotel Beirut. Nombre: '+nombre+''. Carnet de identidad: '+carnet+ . Teléfono: '+telefono+'. Habitación: '+habitacion+'. Fecha de llegada: '+llegada+'. Solicitud: '+mensaje;window.open('https://wa.me/59177153653?text='+encodeURIComponent(textMsg),'_blank');}
 function handleModalSubmit(event){event.preventDefault();if(!estaRegistrado()){closeReservaModal();pedirRegistro();return;}const form=event.target;const vals=Array.from(form.querySelectorAll('input')).map(i=>i.value);const message='Hola, quiero consultar una reserva en Hotel Beirut. Habitación: '+(vals[0]||'Por definir')+'. Nombre: '+(vals[1]||'')+'. Teléfono: '+(vals[2]||'')+'. Entrada: '+(vals[3]||'')+'. Salida: '+(vals[4]||'')+'.';window.open('https://wa.me/59177153653?text='+encodeURIComponent(message),'_blank');closeReservaModal();}
 document.addEventListener('DOMContentLoaded',actualizarEstadoRegistro);
 </script>
